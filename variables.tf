@@ -127,3 +127,8 @@ variable "ingress_controller_namespace" {
   description = "Kubernetes namespace the ingress controller will be deployed into"
   default     = "default"
 }
+
+variable "subnet_id" {
+  description = "Subnet ID for agent pool profile"
+  type = "string"
+}
