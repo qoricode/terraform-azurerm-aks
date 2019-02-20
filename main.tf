@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "aks_resource_group" {
   location = "${var.location}"
-  name     = "${var.cluster_name}"
+  name     = "${var.cluster_name}-rg"
 }
 
 resource "azurerm_kubernetes_cluster" "aks_managed_cluster" {
