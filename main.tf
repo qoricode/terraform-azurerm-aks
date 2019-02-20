@@ -43,7 +43,9 @@ resource "null_resource" "provision" {
   }
 
   provisioner "local-exec" {
-    # Create cluster role for tiller to work with multiple namespaces
+    # Create cluster role for tiller to work with multiple namespaces -
+    # Note spaces in the filename will break this and there seems to be no
+    # way to escape them e.g. with replace() using TF v0.11.10
     command = "kubectl apply -f ${path.module}/k8s/tiller-rbac.yaml"
   }
 
