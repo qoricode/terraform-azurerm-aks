@@ -44,7 +44,7 @@ resource "null_resource" "provision" {
 
   provisioner "local-exec" {
     # Create cluster role for tiller to work with multiple namespaces
-    command = "kubectl apply -f ${replace(path.module, " ", "\ ")}/k8s/tiller-rbac.yaml"
+    command = "kubectl apply -f ${replace(path.module, " ", "\\ ")}/k8s/tiller-rbac.yaml"
   }
 
   provisioner "local-exec" {
